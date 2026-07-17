@@ -1,9 +1,11 @@
-high = int(input())
-low = int(input())
-num = int(input())
+n = int(input())
+m = int(input())
 
-for i in range(high, low - 1, -1):
-    if i != num:
-        print(i, end=" ")
+result = []
+current_number = n
 
-print()
+while current_number >= 0:
+    result.append(current_number)
+    current_number -= m
+
+print(*result)
